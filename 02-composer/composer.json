@@ -1,0 +1,20 @@
+{
+    "name": "pbreteche/demo-25w31",
+    "description": "This is result af training courses.",
+    "type": "project",
+    "require": {
+        "php": ">=8.4"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Pbreteche\\Demo25w31\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pierre Bretéché",
+            "email": "pbreteche@dawan.fr"
+        }
+    ]
+}

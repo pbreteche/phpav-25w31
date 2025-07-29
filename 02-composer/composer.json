@@ -9,7 +9,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Pbreteche\\Demo25w31\\": "src/"
+            "App\\": "src/"
         }
     },
     "authors": [

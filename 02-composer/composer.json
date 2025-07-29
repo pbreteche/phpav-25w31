@@ -3,7 +3,8 @@
     "description": "This is result af training courses.",
     "type": "project",
     "require": {
-        "php": ">=8.4"
+        "php": ">=8.4",
+        "monolog/monolog": "^3.9"
     },
     "license": "MIT",
     "autoload": {

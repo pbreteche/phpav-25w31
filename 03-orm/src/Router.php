@@ -8,11 +8,12 @@ class Router
 {
     private const array ROUTES = [
         '/' => 'App\\Controller\\ContactController::index',
+        '/new' => 'App\\Controller\\ContactController::new',
     ];
 
-    public function executeRoute($REQUEST_URI): string
+    public function executeRoute(string $path): string
     {
-        $callback = self::ROUTES[$REQUEST_URI];
+        $callback = self::ROUTES[$path];
         [$controller, $action] = explode('::', $callback);
 
         if (!method_exists($controller, $action)) {

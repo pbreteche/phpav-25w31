@@ -16,4 +16,15 @@ class ContactController
 
         return $response;
     }
+
+    public function new(): string
+    {
+        $contact = new Contact();
+        $contact->last_name = $_GET['last_name'];
+        $contact->first_name = $_GET['first_name'];
+        $contact->email = $_GET['email'];
+        $contact->save();
+
+        return 'Le contact a été enregistré';
+    }
 }

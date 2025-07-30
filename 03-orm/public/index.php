@@ -11,4 +11,4 @@ $capsule->setAsGlobal();
 $capsule->bootEloquent();
 
 $router = new Router();
-echo $router->executeRoute($_SERVER['REQUEST_URI']);
+echo $router->executeRoute($_SERVER['PATH_INFO']  ?? '/');

@@ -2,10 +2,12 @@
 
 namespace App;
 
+use App\Controller\ErrorController;
+
 class Router
 {
     private const array ROUTES = [
-        '/' => 'App\\ContactController::index',
+        '/' => 'App\\Controller\\ContactController::index',
     ];
 
     public function executeRoute($REQUEST_URI): string

@@ -9,6 +9,8 @@ class Router
     private const array ROUTES = [
         '/' => 'App\\Controller\\ContactController::index',
         '/new' => 'App\\Controller\\ContactController::new',
+        // Affiche le contact selon l'id passé dans la query string
+        '/show' => 'App\\Controller\\ContactController::show',
     ];
 
     public function executeRoute(string $path): string

@@ -4,6 +4,7 @@
     "type": "project",
     "require": {
         "php": ">=8.4",
+        "ext-gd": "*",
         "monolog/monolog": "^3.9"
     },
     "license": "MIT",

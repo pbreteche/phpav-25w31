@@ -5,6 +5,10 @@ class WorkingDayCalculator
 {
     public function computeWorkingDays(\DateTimeImmutable $from, \DateTimeImmutable $to): int
     {
+        if ($from > $to) {
+            throw new \InvalidArgumentException('Start date cannot be greater than end date');
+        }
+
         $allDays = $from->diff($to)->days + 1;
         $fullWeeks = intdiv($allDays, 7);
         $extraDays = $allDays % 7;

@@ -18,6 +18,14 @@ class WorkingDayCalculatorTest extends TestCase
         $this->assertEquals($expected, $count);
     }
 
+    public function testComputeWorkingDaysException(): void
+    {
+        $calculator = new WorkingDayCalculator();
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage('Start date cannot be greater than end date');
+        $calculator->computeWorkingDays(new \DateTimeImmutable('2025-08-01'), new \DateTimeImmutable('2025-07-28'));
+    }
+
     public static function provideComputeWorkingDays(): array
     {
         return [

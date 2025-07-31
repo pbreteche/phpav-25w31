@@ -27,4 +27,15 @@ class ContactController
 
         return 'Le contact a été enregistré';
     }
+
+    public function show(): string
+    {
+        $contact = Contact::find($_GET['id']);
+
+        if (!$contact) {
+            return new ErrorController()->notFound();
+        }
+
+        return $contact->first_name . ' ' . $contact->last_name;
+    }
 }

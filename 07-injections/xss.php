@@ -17,7 +17,7 @@ $from_user_data = [
 </head>
 <body>
     <p>Commentaires</p>
-    <h3><?= $from_user_data['title'] ?></h3>
-    <div><?= $from_user_data['content'] ?></div>
+    <h3><?= htmlspecialchars($from_user_data['title']) ?></h3>
+    <div><?= htmlspecialchars($from_user_data['content']) ?></div>
 </body>
 </html>
